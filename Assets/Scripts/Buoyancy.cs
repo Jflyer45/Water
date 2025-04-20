@@ -299,8 +299,8 @@ public class Buoyancy : MonoBehaviour {
 
             submergedVolume /= voxels.Length;
 
-            this.rigidBody.drag = Mathf.Lerp(minimumDrag, 1.0f, submergedVolume);
-            this.rigidBody.angularDrag = Mathf.Lerp(minimumAngularDrag, 1.0f, submergedVolume);
+            this.rigidBody.linearDamping = Mathf.Lerp(minimumDrag, 1.0f, submergedVolume);
+            this.rigidBody.angularDamping = Mathf.Lerp(minimumAngularDrag, 1.0f, submergedVolume);
 
             // Vector3 fakePos = this.transform.position;
             // fakePos.y = voxels[0,0,0].GetWaterHeight();
